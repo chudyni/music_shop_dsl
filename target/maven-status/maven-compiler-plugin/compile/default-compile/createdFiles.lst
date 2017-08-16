@@ -1,0 +1,7 @@
+musicshop/run/Config$MusicItemsPackageGateway.class
+musicshop/domain/item/MusicItem.class
+musicshop/run/MusicShopDSL.class
+musicshop/domain/item/Guitar.class
+musicshop/domain/item/GuitarMark.class
+musicshop/run/Config.class
+musicshop/domain/MusicItemsPackage.class
