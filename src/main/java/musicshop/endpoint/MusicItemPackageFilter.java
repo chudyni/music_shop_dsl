@@ -12,11 +12,11 @@ import java.util.List;
 @MessageEndpoint
 public class MusicItemPackageFilter {
 	
-	private static final Logger log = Logger.getLogger(MusicItemPackageFilter.class);
+	private static final Logger LOGGER = Logger.getLogger(MusicItemPackageFilter.class);
 
-	@Filter(inputChannel = "musicItemsPackageChannel", outputChannel = "guitarsChannel")
+	@Filter
 	public boolean guitarsOnly(final MusicItemsPackage musicItemsPackage) {
-		log.info("---MusicItemPackageFilter---");
+		LOGGER.info("---MusicItemPackageFilter---");
 		final List<? extends MusicItem> itemsList = musicItemsPackage.getItems();
 		for(MusicItem item : itemsList) {
 			if(!this.isGuitar(item)) {

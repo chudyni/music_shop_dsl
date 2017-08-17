@@ -6,12 +6,6 @@ import musicshop.domain.item.GuitarMark;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.integration.annotation.Gateway;
-import org.springframework.integration.annotation.IntegrationComponentScan;
-import org.springframework.integration.annotation.MessagingGateway;
-import org.springframework.integration.config.EnableIntegration;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +19,6 @@ public class MusicShopDSL {
 
     public static void main(String[] args) throws InterruptedException {
         final ConfigurableApplicationContext context = SpringApplication.run(Config.class, args);
-//        final ConfigurableApplicationContext context = SpringApplication.run(MusicShopDSL.class, args);
 
         final MusicItemsPackage musicItemPackage = prepareGuitarPackage();
         final Config.MusicItemsPackageGateway gateway = context.getBean(Config.MusicItemsPackageGateway.class);

@@ -7,10 +7,10 @@ import org.springframework.integration.annotation.Splitter;
 
 import java.util.List;
 
-//@MessageEndpoint
+@MessageEndpoint
 public class GuitarSplitter {
 
-	@Splitter(inputChannel = "guitarsChannel", outputChannel = "routingChannel")
+	@Splitter
 	public List<Guitar> splitGuitars(final MusicItemsPackage musicItemsPackage) {
 		return (List<Guitar>) musicItemsPackage.getItems();
 	}
