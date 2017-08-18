@@ -72,7 +72,9 @@ public class Config {
         return IntegrationFlows.from("musicItemsPackageChannel")
                 .filter(this.musicItemPackageFilter)
                 .split(this.guitarSplitter)
-//                .route(this.guitarRouter)
+//                .route(this.guitarRouter)    //end with route and go to another IntegrationFlow
+            //channelMapping ?
+
 
                 //WHAT IS THIS SHIT ?
                 .<Guitar, GuitarMark>route(Guitar::getMark, mapping -> mapping
